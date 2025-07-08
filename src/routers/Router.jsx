@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../layouts/Root";
+import Home from "../components/home/Home";
 
 export const router = createBrowserRouter([
   {
@@ -8,7 +9,10 @@ export const router = createBrowserRouter([
     children:[
         {
             index:true,
-            // Component:
+            Component:Home,
+        },
+        {
+            
         }
     ]
   },

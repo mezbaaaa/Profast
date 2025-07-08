@@ -5,7 +5,7 @@ import Footer from '../components/footer/Footer';
 
 const Root = () => {
     return (
-        <div>
+        <div className='w-[1500px] mx-auto syne-font'>
             <header>
                 <Navbar></Navbar>
             </header>
