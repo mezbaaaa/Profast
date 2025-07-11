@@ -30,7 +30,7 @@ const AboutServices = () => {
                         <img src={service.image} alt={service.title} className='w-34 h-34' />
                     </div>
                     <div className="h-32 border-l border-dashed border-gray-400"></div>
-                    <div>
+                    <div className='space-y-3'>
                         <h2 className='font-extrabold text-2xl text-[#03373D] '>{service.title} </h2>
                         <p className='font-medium text-[#606060] '>{service.description} </p>
                     </div>
