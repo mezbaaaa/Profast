@@ -5,3 +5,13 @@
 .syne-font {
     font-family: "Urbanist", sans-serif;
 }
+.swiper-slide {
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
