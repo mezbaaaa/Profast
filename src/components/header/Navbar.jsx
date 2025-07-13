@@ -18,7 +18,7 @@ const Navbar = () => {
                 <NavLink>Be a Rider</NavLink>
             </div>
             <div className='flex gap-4'>
-                <Link className='px-8 py-4 border rounded-xl border-[#DADADA] text-[#606060] font-bold text-xl'>Sing In</Link>
+                <Link to={'/login'} className='px-8 py-4 border rounded-xl border-[#DADADA] text-[#606060] font-bold text-xl'>Sing In</Link>
                 <Link className='flex items-center '><button className='text-[#1F1F1F] font-bold text-xl px-8 py-4 bg-[#CAEB66] rounded-xl cursor-pointer'>Be a rider</button></Link>
             </div>
         </div>

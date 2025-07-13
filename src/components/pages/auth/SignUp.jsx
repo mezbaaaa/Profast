@@ -1,14 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router';
 import SoicalLogin from './SoicalLogin';
+import uploadIcon from '../../../assets/image-upload-icon.png'
 
-const Login = () => {
-  return (
-    <div className="w-full max-w-md mx-auto text-left">
-      <h1 className="text-4xl font-extrabold mb-2">Welcome Back</h1>
-      <p className="mb-6 text-gray-600">Login with Profast</p>
+const SignUp = () => {
+    return (
+        <div className="w-full max-w-md mx-auto text-left">
+      <h1 className="text-4xl font-extrabold mb-2">Create an Account</h1>
+      <p className="mb-6 text-gray-600">Register with Profast</p>
 
       <div className="flex flex-col gap-4">
+        <div>
+            <img src={uploadIcon} alt="icon" className='w-14 h-14 cursor-pointer' />
+        </div>
+        <div>
+          <label className="block mb-1 text-sm font-medium text-gray-700">Name</label>
+          <input
+            type="text"
+            name='name'
+            placeholder="Name"
+            className="w-full px-4 py-3 border rounded-md focus:outline-none "
+          />
+        </div>
         <div>
           <label className="block mb-1 text-sm font-medium text-gray-700">Email</label>
           <input
@@ -29,16 +42,12 @@ const Login = () => {
           />
         </div>
 
-        <div className="text-left">
-          <a href="#" className="text-sm text-gray-500 hover:underline">Forgot Password?</a>
-        </div>
-
         <button className="w-full py-3 bg-[#CAEB66] cursor-pointer text-black font-semibold rounded-md">
-          Login
+          Register
         </button>
 
         <p className="text-sm text-gray-500 text-left">
-          Don’t have any account? <Link to={'/signup'} className="text-lime-600 font-medium hover:underline">Register</Link>
+          Already have an account? <Link to={'/login'} className="text-lime-600 font-medium hover:underline">Login</Link>
         </p>
 
         <div className="flex items-center gap-2 mt-2">
@@ -50,7 +59,7 @@ const Login = () => {
         <SoicalLogin></SoicalLogin>
       </div>
     </div>
-  );
+    );
 };
 
-export default Login;
+export default SignUp;
