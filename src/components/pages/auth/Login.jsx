@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router';
 import SoicalLogin from './SoicalLogin';
 import { useForm } from 'react-hook-form';
+import { Eye, EyeOff } from 'lucide-react';
 
 const Login = () => {
-  const { register }=useForm()
+  const [show,setShow]= useState()
+  const { register,handleSubmit }=useForm()
+
+  const onSubmit = data =>{
+    console.log(data)
+  }
+
   return (
     <div className="w-full max-w-md mx-auto text-left">
       <h1 className="text-4xl font-extrabold mb-2">Welcome Back</h1>
       <p className="mb-6 text-gray-600">Login with Profast</p>
 
-      <form >
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col gap-4">
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">Email</label>
@@ -22,14 +29,17 @@ const Login = () => {
             />
           </div>
 
-          <div>
+          <div className='relative'>
             <label className="block mb-1 text-sm font-medium text-gray-700">Password</label>
             <input
-              type="password"
+              type={show?'text':'password'}
               {...register('password')}
               placeholder="Password"
               className="w-full px-4 py-3 border rounded-md focus:outline-none "
             />
+            <span className='absolute right-3 bottom-3 cursor-pointer' onClick={()=>setShow(!show)}>
+              {show?<Eye />:<EyeOff />}
+            </span>
           </div>
 
           <div className="text-left">
