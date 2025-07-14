@@ -49,7 +49,7 @@ const OurServices = () => {
             </div>
             <div className='grid grid-cols-3 gap-6 mt-8'>
                 {
-                  services.map((service)=><div className='text-center border px-6 py-8 rounded-2xl space-y-4 bg-white/95 hover:bg-[#CAEB66] transition-all duration-300'> 
+                  services.map((service ,index)=><div key={index}  className='text-center border px-6 py-8 rounded-2xl space-y-4 bg-white/95 hover:bg-[#CAEB66] transition-all duration-300'> 
                     <div className='w-max mx-auto'><img className='w-20 h-20 p-4 bg-linear-to-b from-[#EEEDFC] to-[#EEEDFC10] rounded-full' src={service.icon} alt={service.title} /></div>
                     <h2 className='font-bold text-[#03373D] text-2xl '>{service.title} </h2>
                     <p className='font-bold text-[#606060]' >{service.description} </p>

@@ -10,10 +10,10 @@ const Footer = () => {
         {/* Logo */}
         <div className="mb-4">
           {/* Replace with your logo */}
-          <p className='flex items-end cursor-pointer'>
+          <div className='flex items-end'>
             <img src={logo} alt="logo Image" className='mb-2' />
             <p className='font-extrabold text-3xl -ml-4'>Profast</p>
-          </p>
+          </div>
         </div>
 
         {/* Description */}
