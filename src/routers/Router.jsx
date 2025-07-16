@@ -7,6 +7,7 @@ import SignUp from "../components/pages/auth/SignUp";
 import ForgetPass from "../components/pages/auth/ForgetPass";
 import Coverage from "../components/pages/Coverage/Coverage";
 import AboutUs from "../components/pages/AboutUs/AboutUs";
+import Pricing from "../components/pages/Pricing/Pricing";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
         {
           path:'about-us',
           Component: AboutUs
+        },
+        {
+          path: 'pricing',
+          Component: Pricing,
         }
     ]
   },

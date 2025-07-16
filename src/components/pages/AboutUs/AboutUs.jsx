@@ -5,7 +5,7 @@ const AboutUs = () => {
     return (
         <div className='shadow-[0_0_20px_rgba(0,0,0,0.1)] rounded-3xl my-12 py-20 px-28'>
             <div className='w-[600px] space-y-4'>
-                <h1 className='font-extrabold text-6xl text-[#03373D] '>About Us</h1>
+                <h1 className='font-extrabold text-5xl text-[#03373D] '>About Us</h1>
                 <p className='text-[#606060]'>Enjoy fast, reliable parcel delivery with real-time tracking and zero hassle. From personal packages to business shipments — we deliver on time, every time.</p>
             </div>
             <hr className='border-gray-300 mt-6' />

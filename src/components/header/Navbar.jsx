@@ -23,7 +23,7 @@ const Navbar = () => {
                 <NavLink>Services</NavLink>
                 <NavLink to={'/coverage'}>Coverage</NavLink>
                 <NavLink to={'/about-us'}>About Us</NavLink>
-                <NavLink>Pricing</NavLink>
+                <NavLink to={'/pricing'}>Pricing</NavLink>
                 <NavLink>Be a Rider</NavLink>
             </div>
             <div className='flex gap-4'>
