@@ -6,6 +6,7 @@ import Login from "../components/pages/auth/Login";
 import SignUp from "../components/pages/auth/SignUp";
 import ForgetPass from "../components/pages/auth/ForgetPass";
 import Coverage from "../components/pages/Coverage/Coverage";
+import AboutUs from "../components/pages/AboutUs/AboutUs";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
         {
           path: 'coverage',
           Component: Coverage,
+        },
+        {
+          path:'about-us',
+          Component: AboutUs
         }
     ]
   },

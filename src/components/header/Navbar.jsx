@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className='flex items-center gap-5 text-lg'>
                 <NavLink>Services</NavLink>
                 <NavLink to={'/coverage'}>Coverage</NavLink>
-                <NavLink>About Us</NavLink>
+                <NavLink to={'/about-us'}>About Us</NavLink>
                 <NavLink>Pricing</NavLink>
                 <NavLink>Be a Rider</NavLink>
             </div>
