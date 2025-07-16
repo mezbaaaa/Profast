@@ -8,6 +8,7 @@ import ForgetPass from "../components/pages/auth/ForgetPass";
 import Coverage from "../components/pages/Coverage/Coverage";
 import AboutUs from "../components/pages/AboutUs/AboutUs";
 import Pricing from "../components/pages/Pricing/Pricing";
+import Rider from "../components/pages/Rider/Rider";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
         {
           path: 'pricing',
           Component: Pricing,
+        },
+        {
+          path:'rider',
+          Component: Rider
         }
     ]
   },

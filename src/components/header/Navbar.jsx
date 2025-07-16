@@ -24,7 +24,7 @@ const Navbar = () => {
                 <NavLink to={'/coverage'}>Coverage</NavLink>
                 <NavLink to={'/about-us'}>About Us</NavLink>
                 <NavLink to={'/pricing'}>Pricing</NavLink>
-                <NavLink>Be a Rider</NavLink>
+                <NavLink to={'/rider'}>Be a Rider</NavLink>
             </div>
             <div className='flex gap-4'>
                 <Link className='flex items-center '><button className='text-[#1F1F1F] font-bold text-xl px-8 py-4 bg-[#CAEB66] rounded-xl cursor-pointer'>Be a rider</button></Link>
