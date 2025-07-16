@@ -1,15 +1,29 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router';
 import SoicalLogin from './SoicalLogin';
 import { useForm } from 'react-hook-form';
 import { Eye, EyeOff } from 'lucide-react';
+import { AuthContext } from '../../context/AuthContext';
 
 const Login = () => {
-  const [show,setShow]= useState()
-  const { register,handleSubmit }=useForm()
+  const navigate = useNavigate()
+  const [show, setShow] = useState()
+  const { register, handleSubmit } = useForm()
+  const { singInUser } = useContext(AuthContext)
 
-  const onSubmit = data =>{
+  const onSubmit = data => {
     console.log(data)
+    const email = data.email;
+    const password = data.password;
+    singInUser(email,password).then(result=>{
+      const user = result.user;
+      console.log(user)
+      if(user){
+        navigate('/')
+      }
+    }).catch(error=>{
+      console.log(error)
+    })
   }
 
   return (
@@ -32,13 +46,13 @@ const Login = () => {
           <div className='relative'>
             <label className="block mb-1 text-sm font-medium text-gray-700">Password</label>
             <input
-              type={show?'text':'password'}
+              type={show ? 'text' : 'password'}
               {...register('password')}
               placeholder="Password"
               className="w-full px-4 py-3 border rounded-md focus:outline-none "
             />
-            <span className='absolute right-3 bottom-3 cursor-pointer' onClick={()=>setShow(!show)}>
-              {show?<Eye />:<EyeOff />}
+            <span className='absolute right-3 bottom-3 cursor-pointer' onClick={() => setShow(!show)}>
+              {show ? <Eye /> : <EyeOff />}
             </span>
           </div>
 
